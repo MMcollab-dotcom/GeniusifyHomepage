@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Header specific positioning - overrides global centering */
+.header-container {
+  position: absolute !important;
+  top: 1rem !important;
+  left: 1rem !important;
+  z-index: 50 !important;
+  text-align: left !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
