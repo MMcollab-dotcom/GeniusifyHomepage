@@ -1,11 +1,13 @@
 import './App.css';
+import iconImage from './assets/icon.png';
+import blobImage from './assets/blob.png';
 
 function App() {
   return (
     <div className="min-h-screen bg-white font-sans relative overflow-hidden">
       {/* Header - True top-left corner */}
       <header className="header-container">
-        <img src="/src/assets/icon.png" alt="Icon" />
+        <img src={iconImage} alt="Icon" />
         <div>Geniusify</div>
       </header>
 
@@ -15,7 +17,7 @@ function App() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative w-full h-full flex items-center justify-center">
             <img
-              src="/src/assets/blob.png"
+              src={blobImage}
               alt="Abstract blob"
               className="blob-image opacity-50"
               style={{
@@ -33,7 +35,7 @@ function App() {
           {/* Main tagline - floating and elegant */}
           <h1 className="floating-text text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 leading-relaxed">
             <span className="block opacity-90">Scaling human potential</span>
-            <span className="block opacity-70 text-sm md:text-base mt-2"> with artificial intelligence</span>
+            <span className="block opacity-70 text-sm md:text-base mt-2"> with Geniusify.ai</span>
           </h1>
         </div>
 
