@@ -50,4 +50,126 @@
   text-align: left !important;
   margin: 0 !important;
   padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+/* Header elements - side by side and 50% larger */
+.header-container img {
+  width: 2.25rem !important;  /* 1.5rem * 1.5 = 2.25rem (36px) */
+  height: 2.25rem !important; /* 1.5rem * 1.5 = 2.25rem (36px) */
+  flex-shrink: 0 !important;
+}
+
+.header-container div {
+  font-size: 1.6875rem !important; /* 1.125rem * 1.5 = 1.6875rem (27px) */
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+
+/* Floating text container - positioned closer to launch div */
+.floating-text-container {
+  position: absolute !important;
+  bottom: 8rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 15 !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 48rem !important;
+  padding: 0 2rem !important;
+}
+
+/* Floating text with half opacity - no jumping animation */
+.floating-text {
+  opacity: 0.9 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  /* Removed float animation to prevent jumping */
+}
+
+/* Product launch container - positioned at bottom */
+.product-launch-container {
+  position: absolute !important;
+  bottom: 2rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 20 !important;
+  width: 100% !important;
+  max-width: 28rem !important;
+  opacity: 0.8 !important;
+}
+
+/* Elegant form styling - larger size */
+.elegant-input {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px !important; /* Increased from 8px */
+  padding: 0.75rem 0.9rem !important; /* Increased from 0.6rem 0.7rem */
+  font-size: 0.8rem !important; /* Increased from 0.63rem */
+  color: #374151 !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.elegant-input:focus {
+  outline: none !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.elegant-input::placeholder {
+  color: #9ca3af !important;
+  font-weight: 400 !important;
+}
+
+.elegant-button {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important; /* Light white-yellow gradient */
+  border: none !important;
+  border-radius: 10px !important; /* Increased from 8px */
+  padding: 0.75rem 1.25rem !important; /* Increased from 0.6rem 1rem */
+  font-size: 0.8rem !important; /* Increased from 0.63rem */
+  font-weight: 600 !important;
+  color: #92400e !important; /* Darker text for contrast on light background */
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(254, 243, 199, 0.3) !important; /* Light yellow shadow */
+  backdrop-filter: blur(10px) !important;
+}
+
+.elegant-button:hover {
+  background: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%) !important; /* Slightly darker yellow on hover */
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(254, 243, 199, 0.4) !important;
+}
+
+.elegant-button:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 3px 8px rgba(254, 243, 199, 0.3) !important;
+}
+
+/* Blob image sizing - easily configurable */
+.blob-image {
+  max-width: 73rem !important;  /* 320px - smaller than md (28rem) */
+  max-height: 73rem !important; /* 320px - smaller than md (28rem) */
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  opacity: 0.9 !important;
+}
+
+/* Configurable background color to match image */
+:root {
+  --bg-color: hsl(0, 14%, 93%); /* Slightly warm white - adjust this value */
+}
+
+body {
+  background-color: var(--bg-color) !important;
+}
+
+#root {
+  background-color: var(--bg-color) !important;
 }
