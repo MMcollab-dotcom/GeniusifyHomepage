@@ -1,8 +1,10 @@
 import './App.css';
 import iconImage from './assets/icon.png';
 import blobImage from './assets/blob.png';
+import { useState } from 'react';
 
 function App() {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className="min-h-screen bg-white font-sans relative overflow-hidden">
       {/* Header - True top-left corner */}
@@ -19,12 +21,14 @@ function App() {
             <img
               src={blobImage}
               alt="Abstract blob"
-              className="blob-image opacity-50"
+              className={`blob-image ${imageLoaded ? 'opacity-50' : 'opacity-0'}`}
+              onLoad={() => setImageLoaded(true)}
               style={{
                 position: 'absolute',
                 top: '50%',
                 left: '50%',
-                transform: 'translate(-50%, -50%)'
+                transform: 'translate(-50%, -50%)',
+                transition: 'opacity 0.8s ease-in-out'
               }}
             />
           </div>
@@ -34,8 +38,7 @@ function App() {
         <div className="floating-text-container">
           {/* Main tagline - floating and elegant */}
           <h1 className="floating-text text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 leading-relaxed">
-            <span className="block opacity-90">Scaling human potential</span>
-            <span className="block opacity-70 text-sm md:text-base mt-2"> with Geniusify.ai</span>
+            <span className="block opacity-90">Scaling human potential with Geniusify</span>
           </h1>
         </div>
 

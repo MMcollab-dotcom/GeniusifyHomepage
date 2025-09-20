@@ -68,10 +68,10 @@
   white-space: nowrap !important;
 }
 
-/* Floating text container - positioned closer to launch div */
+/* Floating text container - positioned just above launch section */
 .floating-text-container {
   position: absolute !important;
-  bottom: 8rem !important;
+  bottom: 6.5rem !important; /* Just above the launch section */
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index: 15 !important;
@@ -92,7 +92,7 @@
 /* Product launch container - positioned at bottom */
 .product-launch-container {
   position: absolute !important;
-  bottom: 2rem !important;
+  bottom: 1.5rem !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index: 20 !important;
